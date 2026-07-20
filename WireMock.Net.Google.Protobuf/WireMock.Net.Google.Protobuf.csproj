@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <PackageId>WireMock.Net.Google.Protobuf</PackageId>
+        <Description>wiremock dotnet extension for statically typed grpc mocking</Description>
+        <Authors>Stepami</Authors>
+        <Company>N/A</Company>
+        <Copyright>Copyright © Stepami 2026</Copyright>
+        <RepositoryUrl>https://github.com/Stepami/wiremock-protobuf</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageProjectUrl>https://github.com/Stepami/wiremock-protobuf</PackageProjectUrl>
+        <Title>WireMock.Net.Google.Protobuf</Title>
+        <PackageLicenseFile>LICENSE</PackageLicenseFile>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageIcon>icon.png</PackageIcon>
+        <PackageTags>tdd;mock;grpc;proto;protobuf;wiremock;test;server;unittest</PackageTags>
+        <IsPackable>true</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Google.Protobuf" Version="3.35.1"/>
+        <PackageReference Include="WireMock.Net" Version="2.13.0"/>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireMock.Net.Google.Protobuf", "WireMock.Net.Google.Protobuf\WireMock.Net.Google.Protobuf.csproj", "{32A60180-DB32-44EA-8FE5-1A1C5DB92C81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WireMock.Net.Google.Protobuf.Tests", "WireMock.Net.Google.Protobuf.Tests\WireMock.Net.Google.Protobuf.Tests.csproj", "{C0838F68-E824-43CE-A9CE-200585718EFE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionItems", "{1CBD9019-CF1C-4105-973A-A3E4B4F3BFE5}"
+	ProjectSection(SolutionItems) = preProject
+		global.json = global.json
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{32A60180-DB32-44EA-8FE5-1A1C5DB92C81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32A60180-DB32-44EA-8FE5-1A1C5DB92C81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32A60180-DB32-44EA-8FE5-1A1C5DB92C81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32A60180-DB32-44EA-8FE5-1A1C5DB92C81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0838F68-E824-43CE-A9CE-200585718EFE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0838F68-E824-43CE-A9CE-200585718EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0838F68-E824-43CE-A9CE-200585718EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0838F68-E824-43CE-A9CE-200585718EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

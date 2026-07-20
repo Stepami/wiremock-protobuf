@@ -1,0 +1,83 @@
+﻿syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "WireMock.Protobuf.Client";
+
+package test;
+
+service MyTestService {
+  rpc GetGroups(GetGroupsRequestGrpc) returns (GetGroupsResponseGrpc);
+  rpc GetByEmpty(EmptyRequestGrpc) returns (GetEmptyResponseGrpc);
+}
+
+message EmptyRequestGrpc {}
+message GetEmptyResponseGrpc {}
+
+message GetGroupsRequestGrpc {
+  oneof value {
+    ByGroupTypeGrpc byGroupType = 1;
+    ByGroupIds byGroupIds = 2;
+  }
+  repeated string segments = 3;
+  string platform = 4;
+  string version = 5;
+}
+
+message GetGroupsResponseGrpc {
+  repeated GroupGrpc groups = 1;
+}
+
+message GroupGrpc {
+  string id = 1; 
+  EntityTypeGrpc entityType = 2; 
+  repeated string entityIds = 3; 
+  repeated ItemV2Grpc items = 4; 
+}
+
+message ItemV2Grpc {
+  string id = 1; 
+  string url = 2; 
+  google.protobuf.StringValue params = 3; 
+  string typeFront = 4; 
+  string type = 5; 
+  int32 version = 6; 
+  ItemAdditionalParamsScreenGrpc additionalParamsScreen = 7; 
+  ItemOrdersScreenGrpc ordersScreen = 8; 
+  string appUrl = 9; 
+}
+
+message ByGroupTypeGrpc {
+  GroupTypeGrpc groupType = 1; 
+  repeated google.protobuf.StringValue entityIds = 2;
+}
+
+message ByGroupIds {
+  repeated string groupIds = 1;
+}
+
+message ItemAdditionalParamsScreenGrpc {
+  google.protobuf.StringValue fullHd = 1; 
+  google.protobuf.StringValue tablet = 2; 
+  google.protobuf.StringValue mobile = 3; 
+}
+
+message ItemOrdersScreenGrpc {
+  google.protobuf.Int32Value fullHd = 1; 
+  google.protobuf.Int32Value tablet = 2; 
+  google.protobuf.Int32Value mobile = 3; 
+}
+
+enum EntityTypeGrpc {
+  EntityTypeGrpcUnspecified = 0;
+  EntityTypeGrpcPdp = 1;
+  EntityTypeGrpcCategory = 2;
+  EntityTypeGrpcCatalogNavigation = 3;
+}
+
+enum GroupTypeGrpc {
+  GroupTypeGrpcUnspecified = 0;
+  GroupTypeGrpcPdp = 1;
+  GroupTypeGrpcPage = 2;
+  GroupTypeGrpcCatalogNavigation = 3;
+}
