@@ -61,7 +61,7 @@ internal sealed class GrpcPredicateMatcher<TMessage>(
     public string GetCSharpCodeArguments() => "NotImplemented";
 
     /// <inheritdoc />
-    public string Name => nameof(GrpcPredicateMatcher<TMessage>);
+    public string Name => nameof(GrpcPredicateMatcher<>);
 
     /// <inheritdoc />
     public MatchBehaviour MatchBehaviour => matchBehaviour;

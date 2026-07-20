@@ -58,7 +58,7 @@ internal sealed class GrpcMessageMatcher<TMessage>(
     public string GetCSharpCodeArguments() => "NotImplemented";
 
     /// <inheritdoc />
-    public string Name => nameof(GrpcMessageMatcher<TMessage>);
+    public string Name => nameof(GrpcMessageMatcher<>);
 
     /// <inheritdoc />
     public MatchBehaviour MatchBehaviour => matchBehaviour;
