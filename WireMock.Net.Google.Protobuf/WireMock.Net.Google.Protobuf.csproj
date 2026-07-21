@@ -7,7 +7,7 @@
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <PackageId>WireMock.Net.Google.Protobuf</PackageId>
-        <Description>WireMock.Net extension for statically typed GRPC mocking with Google.Protobuf library</Description>
+        <Description>Statically typed gRPC mocking for WireMock.Net using generated Google.Protobuf contracts</Description>
         <Authors>Stepami</Authors>
         <Company>N/A</Company>
         <Copyright>Copyright © Stepami 2026</Copyright>
