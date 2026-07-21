@@ -7,7 +7,7 @@
         <Nullable>enable</Nullable>
         <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
         <PackageId>WireMock.Net.Google.Protobuf</PackageId>
-        <Description>wiremock dotnet extension for statically typed grpc mocking</Description>
+        <Description>WireMock.Net extension for statically typed GRPC mocking with Google.Protobuf library</Description>
         <Authors>Stepami</Authors>
         <Company>N/A</Company>
         <Copyright>Copyright © Stepami 2026</Copyright>
@@ -16,7 +16,7 @@
         <PackageProjectUrl>https://github.com/Stepami/wiremock-protobuf</PackageProjectUrl>
         <Title>WireMock.Net.Google.Protobuf</Title>
         <PackageLicenseFile>LICENSE</PackageLicenseFile>
-        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <PackageReadmeFile>readme.md</PackageReadmeFile>
         <PackageIcon>icon.png</PackageIcon>
         <PackageTags>tdd;mock;grpc;proto;protobuf;wiremock;test;server;unittest</PackageTags>
         <IsPackable>true</IsPackable>
@@ -25,6 +25,12 @@
     <ItemGroup>
         <PackageReference Include="Google.Protobuf" Version="3.35.1"/>
         <PackageReference Include="WireMock.Net" Version="2.13.0"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="../LICENSE" Pack="true" Visible="false" PackagePath=""/>
+        <None Include="../readme.md" Pack="true" Visible="false" PackagePath=""/>
+        <None Include="../icon.png" Pack="true" Visible="false" PackagePath=""/>
     </ItemGroup>
 
 </Project>
