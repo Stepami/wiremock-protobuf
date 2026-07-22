@@ -1,0 +1,61 @@
+name: Push To Master Workflow
+
+on:
+  push:
+    branches:
+      - master
+
+env:
+  PROJ: WireMock.Net.Google.Protobuf
+
+jobs:
+  build-and-publish:
+    name: Get Version then Build and Publish to NuGet
+    runs-on: ubuntu-latest
+    permissions:
+      actions: write
+      contents: write
+      id-token: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: 10.x
+      - name: Setup GitVersion
+        uses: gittools/actions/gitversion/setup@v4
+        with:
+          versionSpec: '6.8.x'
+      - name: Determine Version
+        id: version_step
+        uses: gittools/actions/gitversion/execute@v4
+      - name: Push New Version Tag
+        run: |
+          gv=${{ steps.version_step.outputs.majorMinorPatch }} #gitversion result
+          lt=$( git describe --tags --abbrev=0 ) # last tag version result
+          if [[ $gv != $lt ]]; then
+            git tag $gv
+            git push origin --tags
+          fi
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build --no-restore -c Release -v n /p:Version=${{ steps.version_step.outputs.majorMinorPatch }}
+      - name: Tests
+        run: dotnet test -c Release --no-build -v n
+      - name: Pack
+        run: dotnet pack -c Release --no-build -v n
+      - name: NuGet login (OIDC → temp API key)
+        uses: NuGet/login@v1
+        id: nuget_login
+        with:
+          user: ${{ secrets.NUGET_USER }}
+      - name: Publish
+        run: >-
+          dotnet nuget push
+          ./${{ env.PROJ }}/bin/Release/${{ env.PROJ }}.${{ steps.version_step.outputs.majorMinorPatch }}.nupkg
+          --api-key ${{ steps.nuget_login.outputs.NUGET_API_KEY }}
+          --source https://api.nuget.org/v3/index.json

@@ -10,6 +10,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionItems", "SolutionIt
 		.gitignore = .gitignore
 		readme.md = readme.md
 		icon.png = icon.png
+		GitVersion.yml = GitVersion.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Workflows", "Workflows", "{D915331F-0755-4C9C-AC4F-39B69F700309}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\pr.yml = .github\workflows\pr.yml
+		.github\workflows\master.yml = .github\workflows\master.yml
 	EndProjectSection
 EndProject
 Global
@@ -26,5 +33,8 @@ Global
 		{C0838F68-E824-43CE-A9CE-200585718EFE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0838F68-E824-43CE-A9CE-200585718EFE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0838F68-E824-43CE-A9CE-200585718EFE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D915331F-0755-4C9C-AC4F-39B69F700309} = {1CBD9019-CF1C-4105-973A-A3E4B4F3BFE5}
 	EndGlobalSection
 EndGlobal
