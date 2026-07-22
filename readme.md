@@ -31,7 +31,7 @@ When a contract changes, outdated mocks stop compiling instead of failing at run
 ## Installation
 
 ```bash
-dotnet add package WireMock.Net.Google.Protobuf
+dotnet add package WireMock.Grpc.Protobuf
 ```
 
 The package targets **.NET 8**
@@ -63,8 +63,8 @@ And assuming you also have the required packages added with protobuf compilation
 ```xml
 <Project Sdk="Microsoft.NET.Sdk">
     <ItemGroup>
-        <PackageReference Include="WireMock.Net.Google.Protobuf" Version="2.13.0" />
-        <PackageReference Include="WireMock.Net.Google.Protobuf" Version="1.0.0" />
+        <PackageReference Include="WireMock.Net" Version="2.13.0" />
+        <PackageReference Include="WireMock.Grpc.Protobuf" Version="1.0.0" />
         <PackageReference Include="Grpc.Net.Client" Version="2.80.0" />
         <PackageReference Include="Grpc.Core" Version="2.46.6"/>
         <PackageReference Include="Grpc.Tools" Version="2.82.0">
