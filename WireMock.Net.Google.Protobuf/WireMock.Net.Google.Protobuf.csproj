@@ -33,4 +33,8 @@
         <None Include="../icon.png" Pack="true" Visible="false" PackagePath=""/>
     </ItemGroup>
 
+    <ItemGroup>
+        <InternalsVisibleTo Include="WireMock.Net.Google.Protobuf.Tests" />
+    </ItemGroup>
+
 </Project>

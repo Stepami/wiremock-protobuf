@@ -16,7 +16,7 @@ internal sealed class GrpcPredicateMatcher<TMessage>(
     where TMessage : IMessage<TMessage>, new()
 {
     private static readonly TMessage Empty = new();
-    private static readonly MessageParser<TMessage> Parser = new(() => Empty);
+    private static readonly MessageParser<TMessage> Parser = new(() => new());
 
     /// <inheritdoc />
     public MatchResult IsMatch(object? input)
