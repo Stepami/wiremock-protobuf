@@ -44,11 +44,11 @@ jobs:
       - name: Restore
         run: dotnet restore
       - name: Build
-        run: dotnet build --no-restore -c Release -v n /p:Version=${{ steps.version_step.outputs.majorMinorPatch }}
+        run: dotnet build --no-restore -c Release -v n
       - name: Tests
         run: dotnet test -c Release --no-build -v n
       - name: Pack
-        run: dotnet pack -c Release --no-build -v n
+        run: dotnet pack -c Release --no-build -v n /p:Version=${{ steps.version_step.outputs.majorMinorPatch }}
       - name: NuGet login (OIDC → temp API key)
         uses: NuGet/login@v1
         id: nuget_login
