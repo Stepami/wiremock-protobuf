@@ -3,6 +3,8 @@
 [![GitHub stars](https://img.shields.io/github/stars/Stepami/wiremock-protobuf?style=flat-square)](https://github.com/Stepami/wiremock-protobuf/stargazers)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 
+Link to NuGet: https://www.nuget.org/packages/WireMock.Grpc.Protobuf
+
 **Statically typed gRPC mocking for `WireMock.Net` using generated `Google.Protobuf` contracts.**
 
 ```csharp
