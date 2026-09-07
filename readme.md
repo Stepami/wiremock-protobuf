@@ -36,7 +36,7 @@ When a contract changes, outdated mocks stop compiling instead of failing at run
 dotnet add package WireMock.Grpc.Protobuf
 ```
 
-The package targets **.NET 8**
+The package targets **.NET Standard 2.0** and **.NET 8**.
 
 ## Message Matching
 
