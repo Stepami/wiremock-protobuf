@@ -1,0 +1,16 @@
+<Solution>
+    <Folder Name="/SolutionItems/">
+        <File Path=".gitignore"/>
+        <File Path="Directory.Packages.props"/>
+        <File Path="GitVersion.yml"/>
+        <File Path="global.json"/>
+        <File Path="icon.png"/>
+        <File Path="readme.md"/>
+    </Folder>
+    <Folder Name="/SolutionItems/Workflows/">
+        <File Path=".github/workflows/master.yml"/>
+        <File Path=".github/workflows/pr.yml"/>
+    </Folder>
+    <Project Path="WireMock.Net.Google.Protobuf.Tests/WireMock.Net.Google.Protobuf.Tests.csproj"/>
+    <Project Path="WireMock.Net.Google.Protobuf/WireMock.Net.Google.Protobuf.csproj"/>
+</Solution>
