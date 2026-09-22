@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
         <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
@@ -23,14 +23,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Google.Protobuf" Version="3.36.1" />
-        <PackageReference Include="WireMock.Net.Minimal" Version="2.15.0"/>
+        <PackageReference Include="Google.Protobuf" />
+        <PackageReference Include="WireMock.Net.Minimal" />
     </ItemGroup>
 
     <ItemGroup>
-        <None Include="../LICENSE" Pack="true" Visible="false" PackagePath=""/>
-        <None Include="../readme.md" Pack="true" Visible="false" PackagePath=""/>
-        <None Include="../icon.png" Pack="true" Visible="false" PackagePath=""/>
+        <None Include="../LICENSE" Pack="true" Visible="false" PackagePath="" />
+        <None Include="../readme.md" Pack="true" Visible="false" PackagePath="" />
+        <None Include="../icon.png" Pack="true" Visible="false" PackagePath="" />
     </ItemGroup>
 
     <ItemGroup>

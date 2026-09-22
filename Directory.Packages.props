@@ -1,0 +1,16 @@
+<Project>
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
+        <CentralPackageTransitivePinningEnabled>false</CentralPackageTransitivePinningEnabled>
+    </PropertyGroup>
+    <ItemGroup>
+        <PackageVersion Include="AutoFixture" Version="4.18.1"/>
+        <PackageVersion Include="Google.Protobuf" Version="3.36.1"/>
+        <PackageVersion Include="Grpc.Core" Version="2.46.6"/>
+        <PackageVersion Include="Grpc.Net.Client" Version="2.84.0"/>
+        <PackageVersion Include="Grpc.Tools" Version="2.84.0"/>
+        <PackageVersion Include="TUnit" Version="1.68.17"/>
+        <PackageVersion Include="WireMock.Net.Minimal" Version="2.15.0"/>
+        <PackageVersion Include="WireMock.Net.TUnit" Version="2.15.0"/>
+    </ItemGroup>
+</Project>
